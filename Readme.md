@@ -24,4 +24,4 @@ Lancement :
 Ex : ./FORK-Initialisation-Devices1.sh
 ```
 
-###### Exemple
+###### ETC, ETC
