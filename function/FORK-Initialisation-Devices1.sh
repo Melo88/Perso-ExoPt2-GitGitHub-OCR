@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# Affichage des devices connectés avec adb
-adb devices > DevicesForShutDown-One.txt
-
-# Premier formatage pour recuperer une liste viable du type "n°Serie" seule
-grep -w device DevicesForShutDown-One.txt > DevicesForShutDown-Two.txt
-
-# Second formatage pour recuperer une liste viable du type "n°Serie" seule
-cut -f 1 DevicesForShutDown-Two.txt > DevicesForShutDown-Three.txt
+# Creation fichier avec les Serials des devices
+adb devices | grep -w device | cut -f 1 | sort > abc.txt
 
 # Recuperation dans une variable de chacune des lignes du fichier "DevicesForShutDown-Three.txt" avec sed
 Device1="XXX - Numero de Serie appareils"

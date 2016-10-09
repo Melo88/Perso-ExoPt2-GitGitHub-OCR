@@ -1,23 +1,14 @@
 #!/bin/bash
 
-# Optimisation fort possible / 3 commandes use / Peut etre une seule peut faire la meme chose "GREP | CUT | SED"
-
-# Affichage des devices connectés avec adb
-adb devices > DevicesForShutDown-One.txt
-
-# Premier formatage pour recuperer une liste viable du type "n°Serie" seule
-grep -w device DevicesForShutDown-One.txt > DevicesForShutDown-Two.txt
-#grep -n -v -A 15 'List of devices attached' DevicesForShutDown.txt
-
-# Second formatage pour recuperer une liste viable du type "n°Serie" seule
-cut -f 1 DevicesForShutDown-Two.txt > DevicesForShutDown-Three.txt
+# Creation fichier avec les Serials des devices
+adb devices | grep -w device | cut -f 1 | sort > abc.txt
 
 Device1="XXX - Numero de Serie appareils"
 Device2="XXX - Numero de Serie appareils"
 Device3="XXX - Numero de Serie appareils"
 Device4="XXX - Numero de Serie appareils"
 Device5="XXX - Numero de Serie appareils"
-end='null'
+end='FIN'
 
 # Tableau[Array] pour la boucle for
 tableau=($Device1 $Device2 $Device3 $Device4 $Device5 $end)
