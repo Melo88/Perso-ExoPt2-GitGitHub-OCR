@@ -5,7 +5,7 @@ Le projet consiste en l'utilisation d'un fichier ".sh" pour la configuration de 
 
 ## Pre-requis
 
-Vous avez besoin des outils `ADB (Android Debug Bride)` pour votre systeme :
+Vous avez besoin des outils `ADB (Android Debug Bridge)` pour votre systeme :
 Ubuntu - lancer un terminal :
 > sudo apt-get install android-tools-adb android-tools-fastboot
 
